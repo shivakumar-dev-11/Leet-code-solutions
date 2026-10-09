@@ -4,12 +4,12 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        maxsum = nums[0]
-        sum = nums[0]       
-        for i in range (1 , len(nums)):
-            if sum < 0:
-                sum = 0 
-            sum += nums[i]
-            if sum > maxsum :
-                maxsum = sum  
+        maxsum = float('-inf')
+        presum = 0       
+        for i in range (0, len(nums)):
+            presum += nums[i]
+            if presum > maxsum:
+                maxsum = presum
+            if presum < 0:
+                presum = 0 
         return maxsum
