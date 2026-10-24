@@ -10,11 +10,9 @@ class Solution(object):
             "D": 500,
             "M": 1000
         }
-
         count = 0
-
         for i in range(len(s)):
-            if i  < len(s) -1 and values[s[i]] < values [ s[i+1]]:
+            if i  < len(s) -1 and values[s[i]] < values [s[i+1]]:
                 count -= values[s[i]]
             else:
                 count+= values[s[i]]
