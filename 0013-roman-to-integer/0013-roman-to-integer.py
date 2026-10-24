@@ -14,7 +14,7 @@ class Solution(object):
         count = 0
 
         for i in range(len(s)):
-            if i + 1 < len(s) and values[s[i]] < values [ s[i+1]]:
+            if i  < len(s) -1 and values[s[i]] < values [ s[i+1]]:
                 count -= values[s[i]]
             else:
                 count+= values[s[i]]
